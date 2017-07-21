@@ -4,6 +4,7 @@ var Player = function( name ) {
   this.id = 0;
   this.bet = 0;
   this.numbers = [];
+  this.odds = [];
 }
 
 Player.prototype = {
@@ -49,6 +50,13 @@ Player.prototype = {
 
   pickNumber: function( number ) {
     this.numbers.push( number );
+  },
+
+  countNumbers: function() {
+    var count = this.numbers.map( function( number ) {
+      this.odds.push( number.toString().length );
+    }.bind( this ));
+    return this.odds;
   }
 
 }

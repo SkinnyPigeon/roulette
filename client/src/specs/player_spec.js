@@ -53,18 +53,23 @@ describe( 'The Player: ', function() {
 
   it( "Should be able to place chip on single number: ", function() {
     player.pickNumber( 1 );
-    assert.deepEqual( [ 1 ], player.seeNumbers() );
+    assert.deepEqual([ 1 ], player.seeNumbers() );
   });
 
   it( "Should be able to place chip on multiple numbers: ", function() {
     player.pickNumber( 1 );
     player.pickNumber( 2 );
-    assert.deepEqual( [ 1, 2 ], player.seeNumbers() );
+    assert.deepEqual([ 1, 2 ], player.seeNumbers() );
   });
 
   it( "Should be able to pick ranges of numbers: ", function() {
-    player.pickNumber( [ 1, 2 ] );
-    assert.deepEqual( [[ 1, 2 ]], player.seeNumbers() );
+    player.pickNumber([ 1, 2 ]);
+    assert.deepEqual([[ 1, 2 ]], player.seeNumbers() );
+  });
+
+  it( "Should be able to know the length of a single number: ", function() {
+    player.pickNumber( 1 );
+    assert.deepEqual([ 1 ], player.countNumbers() );
   });
 
 });
