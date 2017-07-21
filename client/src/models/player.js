@@ -5,9 +5,16 @@ var Player = function( name ) {
 
 Player.prototype = {
 
-  showChips: function() {
+  seeChips: function() {
     return this.chips;
+  },
+
+  gamble: function( bet ) {
+    this.chips -= bet;
+    return bet;
   }
+
+
 }
 
 module.exports = Player;
