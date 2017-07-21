@@ -67,7 +67,7 @@
 	MainView.prototype = {
 	
 	  start: function() {
-	    
+	
 	    var table = new Table();
 	    var tableSpace = document.getElementById( 'table-space' );
 	
