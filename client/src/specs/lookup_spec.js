@@ -7,13 +7,13 @@ describe( 'The Lookup: ', function() {
     lookup = new Lookup( 2 );
   });
 
-  it( "Should start with all the odds: ", function() {
-    assert.equal( 7, lookup.countNoOfOdds() );
-  });
-
   it( "Should know the bet to check: ", function() {
     assert.equal( 2, lookup.seeBetToCheck() );
-  })
+  });
+
+  it( "Should be able to return the multiplication for the bet: ", function() {
+    assert.equal( 17, lookup.getMultiplication() );
+  });
 
 
 });
