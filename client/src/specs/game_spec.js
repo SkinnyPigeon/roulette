@@ -13,4 +13,9 @@ describe( 'The Game: ', function() {
     assert.equal( 0, game.noOfPlayers() );
   });
 
+  it( "Should be able to add players: ", function() {
+    game.addPlayer( player );
+    assert.equal( 1, game.noOfPlayers() );
+  });
+
 });

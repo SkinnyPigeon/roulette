@@ -6,7 +6,11 @@ Game.prototype = {
 
   noOfPlayers: function() {
     return this.players.length;
-  }
+  },
+
+  addPlayer: function( player ) {
+    this.players.push( player )
+  },
 
 }
 
