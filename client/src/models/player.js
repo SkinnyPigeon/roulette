@@ -35,6 +35,10 @@ Player.prototype = {
 
   seeLastBet: function() {
     return this.bet;
+  },
+
+  multiplyWinnings: function( multiplication ) {
+    this.bet *= multiplication;
   }
 
 }

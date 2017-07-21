@@ -35,4 +35,10 @@ describe( 'The Player: ', function() {
     assert.equal( 10, player.seeLastBet() );
   });
 
+  it( "Should be able to multiply the last bet: ", function() {
+    player.gamble( 10 );
+    player.multiplyWinnings( 5 );
+    assert.equal( 50, player.seeLastBet() );
+  });
+
 });
