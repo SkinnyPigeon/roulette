@@ -14,6 +14,9 @@ Lookup.prototype = {
       case 2:
         this.multiplication = 17;
         break;
+      case 3:
+        this.multiplication = 11;
+        break;
     }
     return this.multiplication;
   }
