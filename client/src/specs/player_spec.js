@@ -26,4 +26,9 @@ describe( 'The player: ', function() {
     assert.equal( 510, player.seeChips() );
   });
 
+  it( "Should not be able to lose more chips than they have: ", function() {
+    player.gamble( 505 );
+    assert.equal( 500, player.seeChips() );
+  });
+
 })

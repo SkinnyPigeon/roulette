@@ -10,12 +10,20 @@ Player.prototype = {
   },
 
   gamble: function( bet ) {
-    this.chips -= bet;
-    return bet;
+    if( this.chipCheck( bet )) {
+      this.chips -= bet;
+      return bet;
+    };
   },
 
   win: function( winnings ) {
     this.chips += winnings;
+  },
+
+  chipCheck: function( bet ) {
+    if( bet < this.chips ) {
+      return true;
+    }
   }
 
 
