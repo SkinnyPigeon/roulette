@@ -7,8 +7,8 @@ describe( 'The Table: ', function() {
     table = new Table();
   });
 
-  it( "Should start with stuff: ", function() {
-
+  it( "Should start with 37 numbers: ", function() {
+    assert.equal( 37, table.countNumbers() );
   });
 
 });
