@@ -77,9 +77,10 @@ describe( 'The Player: ', function() {
     assert.deepEqual([ 2 ], player.countNumbers() );
   });
 
-  // it( "Should be able to know the length of all the numbers: ", function() {
-  //   player.pickNumber([ 1, [ 2, 3 ]]);
-  //   assert.deepEqual([ 1, 2 ], player.countNumbers() );
-  // });
+  it( "Should be able to know the length of all the numbers: ", function() {
+    player.pickNumber( 1 );
+    player.pickNumber([ 2, 3 ]);
+    assert.deepEqual([ 1, 2 ], player.countNumbers() );
+  });
 
 });
