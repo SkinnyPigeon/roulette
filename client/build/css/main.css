@@ -2,12 +2,14 @@ html, body {
   height: 100%;
 }
 
-#table-space p:hover {
+#table-space li:hover {
   cursor: pointer;
   font-weight: bold;
 }
 
-#table-space p {
+#table-space li {
   margin: 0;
   padding: 1em;
+  list-style-type: none;
+  text-align: center;
 }

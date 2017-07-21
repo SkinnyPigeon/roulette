@@ -11,15 +11,27 @@ MainView.prototype = {
     var table = new Table();
     var tableSpace = document.getElementById( 'table-space' );
 
-    for( var i = 0; i < table.countNumbers(); i++ ) {
-      var number = document.createElement( 'p' );
-      number.innerText = table.seeNumbers( i );
-      number.id = table.seeNumbers( i );
-      number.onclick = function( e ) {
-        this.selectNumber( e.target.id );
-      }.bind( this );
-      tableSpace.appendChild( number );
+    var tableList = document.createElement( 'ul' );
+
+    for( var i = 0; i < table.allRows.length; i++ ) {
+
+      var row = document.createElement( 'ul' );
+      row.style.display = 'table';
+
+      for( var j = 0; j < table.seeRow( i ).length; j++ ) {
+        var number = document.createElement( 'li' );
+
+        number.style.float = 'left';
+        number.innerText = table.seeRow( i )[ j ];
+        number.id = table.seeRow( i )[ j ];
+        number.onclick = function( e ) {
+          this.selectNumber( e.target.id );
+        }.bind( this );
+        row.appendChild( number );
+      }
+      tableList.appendChild( row );
     }
+    tableSpace.appendChild( tableList );
   },
 
   selectNumber: function( id ) {
