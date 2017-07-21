@@ -90,4 +90,13 @@ describe( 'The Player: ', function() {
     assert.equal( 850, player.seeChips() );
   });
 
+  it( "Should be able to work out the odds and win for other bets: ", function() {
+    player.pickNumber( 1 );
+    player.placeBet( 10 );
+    player.pickNumber([ 2, 3 ]);
+    player.placeBet( 10 );
+    player.gamble( true );
+    assert.equal( 1020, player.seeChips() );
+  });
+
 });
