@@ -15,4 +15,8 @@ describe( 'The Table: ', function() {
     assert.equal( 0 , table.seeNumbers( 0 ) );
   });
 
+  it( "Should be able to show a row: ", function() {
+    assert.deepEqual([ 1, 2, 3 ], table.seeRow( 1 ));
+  });
+
 });

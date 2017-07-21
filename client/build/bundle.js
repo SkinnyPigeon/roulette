@@ -114,6 +114,10 @@
 	  this.row11 =  [ 31, 32, 33 ];
 	  this.row12 =  [ 34, 35, 36 ];
 	
+	  this.allRows = [  this.row0, this.row1, this.row3, this.row4,
+	                    this.row5, this.row5, this.row6, this.row7,
+	                    this.row8, this.row9, this.row10, this.row11, 
+	                    this.row12 ]
 	}
 	
 	Table.prototype = {
@@ -124,6 +128,10 @@
 	
 	  seeNumbers: function( index ) {
 	    return this.numbers[ index ];
+	  },
+	
+	  seeRow: function( index ) {
+	    return this.allRows[ index ];
 	  }
 	
 	}
