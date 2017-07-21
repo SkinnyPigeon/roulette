@@ -1,6 +1,7 @@
 var Player = function( name ) {
   this.name = name;
   this.chips = 500;
+  this.id = 0;
 }
 
 Player.prototype = {
@@ -24,6 +25,10 @@ Player.prototype = {
     if( bet < this.chips ) {
       return true;
     }
+  },
+
+  seeID: function() {
+    return this.id;
   }
 
 }

@@ -18,4 +18,14 @@ describe( 'The Game: ', function() {
     assert.equal( 1, game.noOfPlayers() );
   });
 
+  it( "Should iterate player ID on adding player: ", function() {
+    game.addPlayer( player );
+    assert.equal( 2, game.seeNewPlayerID() );
+  });
+
+  it( "Should assign the player an ID: ", function() {
+    game.addPlayer( player );
+    assert.equal( 1, player.seeID() );
+  });
+
 });
