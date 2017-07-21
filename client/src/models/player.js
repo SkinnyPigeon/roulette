@@ -55,9 +55,8 @@ Player.prototype = {
   countNumbers: function() {
     for( var i = 0; i < this.numbers.length; i++ ) {
       if( !Array.isArray( this.numbers[i] )) {
-          this.numbers.map( function( number ) {
-          this.odds.push( number.toString().length );
-        }.bind( this ));
+        var single = this.numbers[i].toString();
+        this.odds.push( single.length );
       } else {
         var count = this.numbers[i].length;
         this.odds.push( count );
