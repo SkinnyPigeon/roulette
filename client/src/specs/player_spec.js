@@ -16,7 +16,7 @@ describe( 'The Player: ', function() {
   });
 
   it( "Should be able to gamble chips: ", function() {
-    player.gamble( 10 );
+    player.placeBet( 10 );
     assert.equal( 490, player.seeChips() );
   });
 
@@ -26,23 +26,23 @@ describe( 'The Player: ', function() {
   });
 
   it( "Should not be able to lose more chips than they have: ", function() {
-    player.gamble( 505 );
+    player.placeBet( 505 );
     assert.equal( 500, player.seeChips() );
   });
 
   it( "Should be able to know what its last bet is: ", function() {
-    player.gamble( 10 );
+    player.placeBet( 10 );
     assert.equal( 10, player.seeLastBet() );
   });
 
   it( "Should be able to multiply the last bet: ", function() {
-    player.gamble( 10 );
+    player.placeBet( 10 );
     player.multiplyWinnings( 5 );
     assert.equal( 50, player.seeLastBet() );
   });
 
   it( "Should receive the multiplied winnings: ", function() {
-    player.gamble( 10 );
+    player.placeBet( 10 );
     player.multiplyWinnings( 2 );
     assert.equal( 510, player.seeChips() );
   });
@@ -83,8 +83,11 @@ describe( 'The Player: ', function() {
     assert.deepEqual([ 1, 2 ], player.countNumbers() );
   });
 
-  // it( "Should be able to work out the odds: ", function() {
-
-  // });
+  it( "Should be able to work out the odds and win: ", function() {
+    player.pickNumber( 1 );
+    player.placeBet( 10 );
+    player.gamble( true );
+    assert.equal( 850, player.seeChips() );
+  });
 
 });

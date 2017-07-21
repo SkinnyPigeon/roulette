@@ -15,7 +15,7 @@ Player.prototype = {
     return this.chips;
   },
 
-  gamble: function( bet ) {
+  placeBet: function( bet ) {
     if( this.chipCheck( bet )) {
       this.bets.push( bet );
       this.chips -= bet;
@@ -69,6 +69,19 @@ Player.prototype = {
       }
     } 
     return this.odds;
+  },
+
+  gamble: function( win ) {
+    if( win ) {
+      this.countNumbers();
+      for( var i = 0; i < this.odds.length; i++ ) {
+        var lookup = new Lookup( this.odds[i] );
+        var multiplication = lookup.getMultiplication();
+        this.win( this.bets[i] );
+        this.bets[i] *= multiplication;
+        this.win( this.bets[i] );
+      }
+    }
   }
 
 }
