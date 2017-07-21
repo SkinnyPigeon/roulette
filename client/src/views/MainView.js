@@ -15,6 +15,7 @@ MainView.prototype = {
     tableList.style.display = 'table';
     tableList.style.maxWidth = '100%';
     tableList.style.textAlign = 'center';
+    tableList.style.float = 'left';
 
     for( var i = 0; i < table.allRows.length; i++ ) {
 
@@ -25,7 +26,6 @@ MainView.prototype = {
 
       for( var j = 0; j < table.seeRow( i ).length; j++ ) {
         var number = document.createElement( 'li' );
-
         number.style.display = 'inline';
         number.innerText = table.seeRow( i )[ j ];
         number.id = table.seeRow( i )[ j ];
@@ -37,6 +37,36 @@ MainView.prototype = {
       tableList.appendChild( row );
     }
     tableSpace.appendChild( tableList );
+
+    var twelvesList = document.createElement( 'ul' );
+    twelvesList.style.float = 'left';
+    var numberList = document.createElement( 'ul' );
+    numberList.style.float = 'left';
+
+    var firstTwelve = document.createElement( 'li' );
+    // firstTwelve.style.transform = 'rotate(270deg)'
+    var secondTwelve = document.createElement( 'li' );
+    // secondTwelve.style.transform = 'rotate(270deg)'
+    var thirdTwelve = document.createElement( 'li' );
+    // thirdTwelve.style.transform = 'rotate(270deg)'
+
+    var odds = document.createElement( 'li' );
+    var evens = document.createElement( 'li' );
+
+    odds.innerText = 'Odds';
+    evens.innerText = 'Evens';
+    firstTwelve.innerText = 'First Twelve';
+    secondTwelve.innerText = 'Second Twelve';
+    thirdTwelve.innerText = 'Third Twelve';
+
+    twelvesList.appendChild( firstTwelve );
+    twelvesList.appendChild( secondTwelve );
+    twelvesList.appendChild( thirdTwelve );
+    numberList.appendChild( odds );
+    numberList.appendChild( evens );
+
+    tableSpace.appendChild( twelvesList );
+    tableSpace.appendChild( numberList );
   },
 
   selectNumber: function( id ) {
