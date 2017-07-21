@@ -26,7 +26,6 @@ Player.prototype = {
     }
   }
 
-
 }
 
 module.exports = Player;

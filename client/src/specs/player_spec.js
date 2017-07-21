@@ -1,8 +1,7 @@
 var assert = require( 'chai' ).assert;
 var Player = require( '../models/player.js' );
 
-describe( 'The player: ', function() {
-
+describe( 'The Player: ', function() {
 
   beforeEach( function() {
     player = new Player( "Jeff" );
@@ -31,4 +30,4 @@ describe( 'The player: ', function() {
     assert.equal( 500, player.seeChips() );
   });
 
-})
+});
