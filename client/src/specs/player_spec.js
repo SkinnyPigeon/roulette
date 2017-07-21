@@ -72,4 +72,9 @@ describe( 'The Player: ', function() {
     assert.deepEqual([ 1 ], player.countNumbers() );
   });
 
+  it( "Should be able to know the length of multiple numbers: ", function() {
+    player.pickNumber([ 1, 2 ]);
+    assert.deepEqual([ 2 ], player.countNumbers() );
+  });
+
 });
