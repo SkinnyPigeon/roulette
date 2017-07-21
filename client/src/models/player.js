@@ -1,3 +1,5 @@
+var Lookup = require( './lookup.js' );
+
 var Player = function( name ) {
   this.name = name;
   this.chips = 500;
