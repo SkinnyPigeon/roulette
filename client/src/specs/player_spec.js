@@ -30,4 +30,9 @@ describe( 'The Player: ', function() {
     assert.equal( 500, player.seeChips() );
   });
 
+  it( "Should be able to know what its last bet is: ", function() {
+    player.gamble( 10 );
+    assert.equal( 10, player.seeLastBet() );
+  });
+
 });

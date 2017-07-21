@@ -2,6 +2,7 @@ var Player = function( name ) {
   this.name = name;
   this.chips = 500;
   this.id = 0;
+  this.bet = 0;
 }
 
 Player.prototype = {
@@ -12,6 +13,7 @@ Player.prototype = {
 
   gamble: function( bet ) {
     if( this.chipCheck( bet )) {
+      this.bet = bet;
       this.chips -= bet;
       return bet;
     };
@@ -29,6 +31,10 @@ Player.prototype = {
 
   seeID: function() {
     return this.id;
+  },
+
+  seeLastBet: function() {
+    return this.bet;
   }
 
 }

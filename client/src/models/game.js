@@ -1,3 +1,5 @@
+var _ = require( 'lodash' );
+
 var Game = function() {
   this.players = [];
   this.newPlayerID = 1;
