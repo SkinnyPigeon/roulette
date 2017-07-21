@@ -51,13 +51,15 @@
 	}
 	
 	var main = function() {
-	  var MainView = new MainView();
+	  var mainView = new MainView();
 	}
 
 /***/ },
 /* 1 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
+	var Table = __webpack_require__( 2 );
+	
 	var MainView = function() {
 	  this.start();
 	};
@@ -66,11 +68,40 @@
 	
 	  start: function() {
 	    console.log( "Hello World" );
+	    var table = new Table();
+	    console.log( table.countNumbers() );
 	  },
 	
 	};
 	
 	module.exports = MainView;
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	var Table = function() {
+	
+	  this.numbers =  [  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14,  
+	                    15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
+	                    30, 31, 32, 33, 34, 35, 36 ];
+	
+	
+	}
+	
+	Table.prototype = {
+	
+	  countNumbers: function() {
+	    return this.numbers.length;
+	  },
+	
+	  seeNumbers: function() {
+	    return this.numbers;
+	  }
+	
+	}
+	
+	module.exports = Table;
 
 /***/ }
 /******/ ]);
