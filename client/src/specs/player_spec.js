@@ -83,4 +83,8 @@ describe( 'The Player: ', function() {
     assert.deepEqual([ 1, 2 ], player.countNumbers() );
   });
 
+  // it( "Should be able to work out the odds: ", function() {
+
+  // });
+
 });
