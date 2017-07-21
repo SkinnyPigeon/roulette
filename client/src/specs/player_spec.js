@@ -99,4 +99,11 @@ describe( 'The Player: ', function() {
     assert.equal( 1020, player.seeChips() );
   });
 
+  it( "Should just lose the money and not win on a loss: ", function() {
+    player.pickNumber( 1 );
+    player.placeBet( 10 );
+    player.gamble( false );
+    assert.equal( 490, player.seeChips() );
+  })
+
 });
