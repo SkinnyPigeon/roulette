@@ -3,6 +3,7 @@ var Player = function( name ) {
   this.chips = 500;
   this.id = 0;
   this.bet = 0;
+  this.numbers = [];
 }
 
 Player.prototype = {
@@ -41,6 +42,10 @@ Player.prototype = {
     this.bet *= multiplication;
     this.win( this.bet );
   },
+
+  seeNumbers: function() {
+    return this.numbers;
+  }
 
 }
 

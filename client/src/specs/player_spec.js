@@ -47,4 +47,8 @@ describe( 'The Player: ', function() {
     assert.equal( 510, player.seeChips() );
   });
 
+  it( "Should start a round with no numbers selected: ", function() {
+    assert.deepEqual( [], player.seeNumbers() );
+  });
+
 });
