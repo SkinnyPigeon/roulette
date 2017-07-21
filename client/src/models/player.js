@@ -12,6 +12,10 @@ Player.prototype = {
   gamble: function( bet ) {
     this.chips -= bet;
     return bet;
+  },
+
+  win: function( winnings ) {
+    this.chips += winnings;
   }
 
 

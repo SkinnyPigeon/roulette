@@ -21,4 +21,9 @@ describe( 'The player: ', function() {
     assert.equal( 490, player.seeChips() );
   });
 
+  it( "Should be able to win chips: ", function() {
+    player.win( 10 );
+    assert.equal( 510, player.seeChips() );
+  });
+
 })
