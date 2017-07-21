@@ -45,6 +45,10 @@ Player.prototype = {
 
   seeNumbers: function() {
     return this.numbers;
+  },
+
+  pickNumber: function( number ) {
+    this.numbers.push( number );
   }
 
 }

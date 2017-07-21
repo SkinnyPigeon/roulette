@@ -51,4 +51,9 @@ describe( 'The Player: ', function() {
     assert.deepEqual( [], player.seeNumbers() );
   });
 
+  it( "Should be able to place chip on single number:", function() {
+    player.pickNumber( 1 );
+    assert.deepEqual( [ 1 ], player.seeNumbers() );
+  })
+
 });
