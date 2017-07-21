@@ -41,4 +41,10 @@ describe( 'The Player: ', function() {
     assert.equal( 50, player.seeLastBet() );
   });
 
+  it( "Should receive the multiplied winnings: ", function() {
+    player.gamble( 10 );
+    player.multiplyWinnings( 2 );
+    assert.equal( 510, player.seeChips() );
+  });
+
 });

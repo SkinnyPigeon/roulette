@@ -39,7 +39,8 @@ Player.prototype = {
 
   multiplyWinnings: function( multiplication ) {
     this.bet *= multiplication;
-  }
+    this.win( this.bet );
+  },
 
 }
 
