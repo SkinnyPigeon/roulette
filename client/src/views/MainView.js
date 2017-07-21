@@ -1,4 +1,5 @@
 var Table = require( '../models/table' );
+var Wheel = require( '../models/wheel' );
 
 var MainView = function() {
   this.start();
@@ -44,11 +45,8 @@ MainView.prototype = {
     numberList.style.float = 'left';
 
     var firstTwelve = document.createElement( 'li' );
-    // firstTwelve.style.transform = 'rotate(270deg)'
     var secondTwelve = document.createElement( 'li' );
-    // secondTwelve.style.transform = 'rotate(270deg)'
     var thirdTwelve = document.createElement( 'li' );
-    // thirdTwelve.style.transform = 'rotate(270deg)'
 
     var odds = document.createElement( 'li' );
     var evens = document.createElement( 'li' );

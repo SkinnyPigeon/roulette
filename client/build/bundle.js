@@ -59,6 +59,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var Table = __webpack_require__( 2 );
+	var Wheel = __webpack_require__( 3 );
 	
 	var MainView = function() {
 	  this.start();
@@ -104,11 +105,8 @@
 	    numberList.style.float = 'left';
 	
 	    var firstTwelve = document.createElement( 'li' );
-	    // firstTwelve.style.transform = 'rotate(270deg)'
 	    var secondTwelve = document.createElement( 'li' );
-	    // secondTwelve.style.transform = 'rotate(270deg)'
 	    var thirdTwelve = document.createElement( 'li' );
-	    // thirdTwelve.style.transform = 'rotate(270deg)'
 	
 	    var odds = document.createElement( 'li' );
 	    var evens = document.createElement( 'li' );
@@ -184,6 +182,20 @@
 	}
 	
 	module.exports = Table;
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	var Wheel = function() {
+	
+	}
+	
+	Wheel.prototype = {
+	  
+	}
+	
+	module.exports = Wheel;
 
 /***/ }
 /******/ ]);
