@@ -4,7 +4,7 @@ var Player = function( name ) {
   this.name = name;
   this.chips = 500;
   this.id = 0;
-  this.bet = 0;
+  this.bets = [];
   this.numbers = [];
   this.odds = [];
 }
@@ -17,7 +17,7 @@ Player.prototype = {
 
   gamble: function( bet ) {
     if( this.chipCheck( bet )) {
-      this.bet = bet;
+      this.bets.push( bet );
       this.chips -= bet;
       return bet;
     };
@@ -38,12 +38,16 @@ Player.prototype = {
   },
 
   seeLastBet: function() {
-    return this.bet;
+    for( var i = 0; i < this.bets.length; i++ ) {
+      return this.bets[i];
+    }
   },
 
   multiplyWinnings: function( multiplication ) {
-    this.bet *= multiplication;
-    this.win( this.bet );
+    for( var i = 0; i < this.bets.length; i++ ) {
+      this.bets[i] *= multiplication;
+      this.win( this.bets[i] );
+    }
   },
 
   seeNumbers: function() {
