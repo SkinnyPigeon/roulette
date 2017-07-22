@@ -218,20 +218,34 @@
 	  },
 	
 	  rotateArray: function() {
-	    var spunWheel = this.allNumbers.push( this.allNumbers.shift() );
-	    return spunWheel;
+	    this.allNumbers.push( this.allNumbers.shift() );
 	  },
 	
-	  spin: function() {
+	  spinStart: function() {
 	    var index = this.chooseRandomIndex();
-	    while( this.spinCount < 100 ) {
-	      console.log( 'hello' );
+	    var finalNumber = this.allNumbers[ index ];
+	    for( var i = 0; i < 100; i++ ) {
+	      this.rotateArray();
+	      this.spinCount ++;
+	      this.spinEnd( finalNumber );
 	    }
+	
 	  },
+	
+	  spinEnd: function( finalNumber ) {
+	    if( this.spinCount < 100 ) {
+	      return
+	    }
+	    while ( this.allNumbers[0] !== finalNumber ) {
+	      this.rotateArray();
+	    }
+	  }
 	
 	}
 	
 	module.exports = Wheel;
+	
+
 
 /***/ },
 /* 4 */
