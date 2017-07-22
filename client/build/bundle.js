@@ -225,14 +225,15 @@
 	    var index = this.chooseRandomIndex();
 	    var finalNumber = this.allNumbers[ index ];
 	    for( var i = 0; i < 100; i++ ) {
-	      this.rotateArray();
-	      this.spinCount ++;
-	      this.spinEnd( finalNumber );
+	        this.rotateArray();
+	        this.spinCount ++;
+	        this.spinEnd( finalNumber );
 	    }
 	
 	  },
 	
 	  spinEnd: function( finalNumber ) {
+	    console.log( this.spinCount );
 	    if( this.spinCount < 100 ) {
 	      return
 	    }
